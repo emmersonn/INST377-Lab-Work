@@ -156,7 +156,7 @@ form {
 */
 
 .box {
-  background-color: rgba(239, 239, 239, 0.40);
+  background-color: rgba(85, 139, 110, 0.40);
   border: 2px dashed;
   border-radius: 4px;
 
@@ -167,14 +167,14 @@ form {
 }
 
 .left_section {
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: rgba(241, 200, 219, 0.8);
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
 }
 
 .right_section {
-  background-color: rgba(255, 224, 138, 0.7);
+  background-color: rgba(136, 160, 158, 0.7);
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
@@ -196,7 +196,7 @@ form {
 }
 
 .footer a {
-  color: rgba(255, 224, 138, 1);
+  color: rgba(184, 140, 158, 1);
   text-decoration: underline;
 }
 
@@ -207,9 +207,9 @@ form {
 */
 .footer a:hover {
   /* Hue, saturation, luminosity, alpha */
-  background-color: hsla(0, 0%, 90%, 0.15);
+  background-color: rgba(136,160,158);
   /* red, green, blue, alpha */
-  color: rgb(246, 169, 93);
+  color: rgb(112, 78, 94);
   text-decoration: none;
 }
 
