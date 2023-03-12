@@ -1,9 +1,40 @@
-<!-- Bring in your successful HTML/CSS from the Flexbox lab -->
-<!-- Your page will need a form in it, but that form will not need an action
-    You will need to add the attribute "name" to your input
-    with a value of 'resto'
-
-    You will need to hook your script.js to this file for the midterm to work
-    you will need a "filter" button with a type of "button" and a
-    "load data" button with a type of "submit" on it
--->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emersons Labs 377</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"><h1>Emerson INST 377 Labs</h1></header>
+        <div class="container">
+            <div class="left_section box">
+                <h2>Form Inputs</h2>
+                <form
+                    action=https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json
+                    class="box"
+                >
+                <div>
+                    <label for="resto"></label>
+                    <input type="text" name="resto" id="resto">
+                </div>
+                <button type="submit">Load Data</button>
+                <button type="submit">Filter Data</button>
+                </form>
+            </div>
+            <div class="right_section box"></div>
+                <h2>Local Restaurant List</h2>
+                <div class="box" id="restaurant_list">
+                    A list of Local Restaurants from an API
+                </div>
+            </div>
+        </div>
+        <footer class="footer"> 
+            emmersonn
+            <a href="https://github.com/emmersonn">github account</a>
+        </footer>
+        </div>
+    </body>
+</html>
