@@ -57,6 +57,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   });
   
   filterButton.addEventListener('click',(event) => {
+    console.log('clicked FilterButton');
     })
 
   
