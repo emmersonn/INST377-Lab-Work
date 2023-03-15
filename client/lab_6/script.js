@@ -17,7 +17,6 @@ function injectHTML(list){
   })
 }
 
-<<<<<<< HEAD
 /* A quick filter that will return something based on a matching input */
 function filterList(list, query) {
   return list.filter((item) => {
@@ -25,7 +24,7 @@ function filterList(list, query) {
     const lowerCaseQuery = query.toLowerCase();
     return lowerCaseName.includes(lowerCaseQuery);
    })
-=======
+
 async function mainEvent() {
   /*
     ## Main Event
