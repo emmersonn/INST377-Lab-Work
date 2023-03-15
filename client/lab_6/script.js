@@ -40,6 +40,10 @@ async function mainEvent() { // the async keyword means we can make API requests
   const filterButton = document.querySelector('#filter');
   const loadDataButton = document.querySelector('#data_load');
   const generateListButton = document.querySelector('#generate');
+  
+  const loadAnimation = document.querySelector('');
+  loadAnimation.style.display = 'none';
+  
   let currentList = []; // this is "scoped" to the main event function
 
   /* We need to listen to an "event" to have something happen in our page - here we're listening for a "submit" */
@@ -55,7 +59,7 @@ async function mainEvent() { // the async keyword means we can make API requests
     console.table(currentList); 
   });
   
-  
+
   //filtering a list rquires a second function 
   //event listener is always on
   
@@ -86,7 +90,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       injectHTML(restaurantsList);
     })
 
-  
+  }
 /*
   This adds an event listener that fires our main event only once our page elements have loaded
   The use of the async keyword means we can "await" events before continuing in our scripts
