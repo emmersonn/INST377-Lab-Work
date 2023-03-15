@@ -48,14 +48,16 @@ async function mainEvent() { // the async keyword means we can make API requests
 
   /* We need to listen to an "event" to have something happen in our page - here we're listening for a "submit" */
   loadDataButton.addEventListener('click', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
-      submitEvent.preventDefault(); 
-      console.log('form submission'); 
+      console.log('Loading data'); 
+      loadAnimation.style.display = 'inline-block';
 
     // Basic GET request - this replaces the form Action
     const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
     
   // This changes the response from the GET into data we can use - an "object"
     currentList = await results.json();
+
+    loadAnimation.style.display = 'none';
     console.table(currentList); 
   });
   
@@ -90,7 +92,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       injectHTML(restaurantsList);
     })
 
-  }
+}
 /*
   This adds an event listener that fires our main event only once our page elements have loaded
   The use of the async keyword means we can "await" events before continuing in our scripts
