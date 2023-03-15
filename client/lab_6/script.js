@@ -1,5 +1,5 @@
 
-
+console.log(results); //find new place
 
 
 function getRandomIntInclusive(min,max) {
@@ -29,7 +29,11 @@ function filterList(list, query) {
 
 function cutRestaurantList (){
   console.log('fired cut list');
-
+  const range = [...Array(15),keys()];
+  const newArray = range.map((item, index) => {
+    const idx = getRandomIntInclusive(0, list.length -1);
+    
+  })
 }
 
 async function mainEvent() { // the async keyword means we can make API requests
@@ -44,15 +48,10 @@ async function mainEvent() { // the async keyword means we can make API requests
       submitEvent.preventDefault(); 
       console.log('form submission'); 
 
-    
-      // Basic GET request - this replaces the form Action
+    // Basic GET request - this replaces the form Action
     const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
     
-
-
-
-    // This changes the response from the GET into data we can use - an "object"
-    console.log(results); //find new place
+  // This changes the response from the GET into data we can use - an "object"
     currentList = await results.json();
     console.table(currentList); 
     injectHTML(currentList);
