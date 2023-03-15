@@ -1,7 +1,6 @@
+//
 
-console.log(results); //find new place
-
-
+//
 function getRandomIntInclusive(min,max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -30,9 +29,9 @@ function filterList(list, query) {
 function cutRestaurantList (){
   console.log('fired cut list');
   const range = [...Array(15),keys()];
-  const newArray = range.map((item, index) => {
-    const idx = getRandomIntInclusive(0, list.length -1);
-    
+  return newArray = range.map((item) => {
+    const index = getRandomIntInclusive(0, list.length -1);
+    return list[index]
   })
 }
 
@@ -54,41 +53,40 @@ async function mainEvent() { // the async keyword means we can make API requests
   // This changes the response from the GET into data we can use - an "object"
     currentList = await results.json();
     console.table(currentList); 
-    injectHTML(currentList);
   });
   
-  filterButton.addEventListener('click',(event) => {
+  
+  //filtering a list rquires a second function 
+  //event listener is always on
+  
+  // event listener is own button 
+  filterDataButton.addEventListener('click',(event) => {
     console.log('clicked FilterButton');
 
     const FormData = new FormData(mainForm);
     const formProps = Object.fromEntries(formData);
 
+    //access all forms
+    //will retrive all forms 
+    
     console.log(formProps);
+    
+    //use filters list
     const newList  = filterList(currentList, formProps.resto); 
-    injectHTML(currentList);
+    //log out
     console.log(newList);
+    injectHTML(newlist);
     })
 
+    
     generateListButton.assEventListener('click',(event) =>{
-
+      console.log('generate new list')
+      const restaurantsList = cutRestaurantsList(currentList);
+      console.log(restaurantsList);
+      injectHTML(restaurantsList);
     })
 
   
-
-  /*
-    Now that you HAVE a list loaded, write an event listener set to your filter button
-    it should use the 'new FormData(target-form)' method to read the contents of your main form
-    and the Object.fromEntries() method to convert that data to an object we can work with
-
-    When you have the contents of the form, use the placeholder at line 7
-    to write a list filter
-
-    Fire it here and filter for the word "pizza"
-    you should get approximately 46 results
-  */
-}
-
-
 /*
   This adds an event listener that fires our main event only once our page elements have loaded
   The use of the async keyword means we can "await" events before continuing in our scripts
