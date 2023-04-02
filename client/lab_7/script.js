@@ -43,6 +43,11 @@ function getRandomIntInclusive(min,max) {
 
 
     let storedList = [];
+    id (storedList.length > 0){
+        generateListButton.classList.remove('hidden');
+    }
+
+
     let currentList = []; // this is "scoped" to the main event function
     /* We need to listen to an "event" to have something happen in our page - here we're listening for a "submit" */
     loadDataButton.addEventListener('click', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
