@@ -51,9 +51,9 @@ function getRandomIntInclusive(min,max) {
       const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
       
     // This changes the response from the GET into data we can use - an "object"
-      currentList = await results.json();
+      storedList = await results.json();
       loadAnimation.style.display = 'none';
-      console.table(currentList); 
+      console.table(storedList); 
     });
     
     //filtering a list rquires a second function 
@@ -80,9 +80,9 @@ function getRandomIntInclusive(min,max) {
       
       generateListButton.addEventListener('click',(event) =>{
         console.log('generate new list')
-        const restaurantsList = cutRestaurantsList(currentList);
-        console.log(restaurantsList);
-        injectHTML(restaurantsList);
+        currentList = cutRestaurantsList(storedList);
+        console.log(currentList);
+        injectHTML(CurrentList);
       })
 
       textField.addEventListener('input',(event) =>{
