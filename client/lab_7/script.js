@@ -37,9 +37,11 @@ function getRandomIntInclusive(min,max) {
     const generateListButton = document.querySelector('#generate');
     const textField = documen.querySelector('#resto');
     
-    const loadAnimation = document.querySelector('');
+    const loadAnimation = document.querySelector('#data_load_animation');
     loadAnimation.style.display = 'none';
-    
+
+
+    let storedList = [];
     let currentList = []; // this is "scoped" to the main event function
     /* We need to listen to an "event" to have something happen in our page - here we're listening for a "submit" */
     loadDataButton.addEventListener('click', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
