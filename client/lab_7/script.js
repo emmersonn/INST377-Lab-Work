@@ -76,11 +76,15 @@ function getRandomIntInclusive(min,max) {
       injectHTML(newlist);
       })
       
-      generateListButton.assEventListener('click',(event) =>{
+      generateListButton.addEventListener('click',(event) =>{
         console.log('generate new list')
         const restaurantsList = cutRestaurantsList(currentList);
         console.log(restaurantsList);
         injectHTML(restaurantsList);
+      })
+
+      textField.addEventListener('input',(event) =>{
+
       })
   }
   /*
