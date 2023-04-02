@@ -35,6 +35,7 @@ function getRandomIntInclusive(min,max) {
     const filterButton = document.querySelector('#filter');
     const loadDataButton = document.querySelector('#data_load');
     const generateListButton = document.querySelector('#generate');
+    const textField = documen.querySelector('#resto');
     
     const loadAnimation = document.querySelector('');
     loadAnimation.style.display = 'none';
