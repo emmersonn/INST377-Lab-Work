@@ -1,5 +1,51 @@
-<!--
-    Replace this with your working code from Lab 2, and include:
-    - The styles in this folder's `style.css`
-    - The script in script.js, which should be included via a `<script src="script.js" >` call before your closing </body> tag 
--->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmersonLabs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper"> 
+    <!--wrapper-->
+    <header class="header"><h1>Emersons Lab3 For INST377</h1></header>
+    <div class="container">
+      <!--container-->
+      <div class="left_section box">
+        <!--left inputs-->
+        <h3>Album Names</h3>
+        <ol class="box">
+          <li>Yeah Yeah Yeahs - Fever to Tell</li>
+          <li>Underworld - Dubnobasswithmyheadman</li>
+          <li>Young Fathers - Cocoa Butter</li>
+          <li>Sleigh Bells - Treats</li>
+          <li>Handsome Furs - Face Control</li>
+        </ol>
+      </div>
+      <div class="right_section box"> 
+        <h3>Image Carousel</h3>
+        <div class="carousel">
+            <button class="next">prev</button>
+            <div class="slides"> 
+            <div class="carousel_item visible"><img id="slide 1" src="images/blackwhitecat.png" alt="black and white cat"/></div>
+            <div class="carousel_item hidden"><img id="slide 2" src="images/kitten.png" alt="kitten"/></div>
+            <div class="carousel_item hidden"><img id="slide 3" src="images/restingcat.png" alt="resting cat"/></div>
+            <div class="carousel_item hidden"><img id="slide4" src="images/sleepycat.png" alt="tired cat"
+            /></div>
+        </div>
+        <button class="next">next</button>
+        </div>
+        <div class="box">
+            <!--description box-->
+            Cute Cats!  
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+    emmersonn <a href="http://github.com/UMD-INST377/" target="_blank" rel="noopener noreferrer">Your Github Account</a class="footer" a>
+    </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
